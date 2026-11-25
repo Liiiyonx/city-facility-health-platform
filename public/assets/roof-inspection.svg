@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">屋顶病害巡检示意</title><desc id="desc">屋顶检测框、无人机与建筑屋面示意</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#edf4f3"/><stop offset="1" stop-color="#dce9e8"/></linearGradient><linearGradient id="roof" x1="0" x2="1"><stop stop-color="#708f8d"/><stop offset="1" stop-color="#3b6464"/></linearGradient><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0v28" fill="none" stroke="#4e8580" stroke-opacity=".1"/></pattern></defs>
+  <rect width="640" height="360" rx="26" fill="url(#bg)"/><rect width="640" height="360" rx="26" fill="url(#grid)"/>
+  <circle cx="99" cy="80" r="91" fill="#fff" opacity=".24"/>
+  <path d="m120 185 221-101 181 98-220 106-182-103Z" fill="#d0ddda"/><path d="m120 185 182 103v46L120 230v-45Z" fill="#eaf0ef"/><path d="m302 288 220-106v47L302 334v-46Z" fill="#abc1bd"/>
+  <path d="m154 174 185-82 151 80-185 87-151-85Z" fill="url(#roof)"/>
+  <g stroke="#a9c2bd" stroke-width="2" opacity=".5"><path d="m196 160 154-67M226 176l154-67M256 192l154-67M286 208l154-67"/><path d="m213 132 151 84M261 110l151 84"/></g>
+  <path d="m328 159 62-28 39 20-61 30-40-22Z" fill="#263f43" opacity=".8"/><path d="m345 155 42-18" stroke="#819d98" stroke-width="3"/>
+  <g fill="none" stroke="#e0a74e" stroke-width="3"><path d="M315 143h82v52h-82z"/><path d="M307 135h12M403 135h12M307 203h12M403 203h12"/></g>
+  <g transform="translate(410 60)"><path d="M-24 0h48M0-15v30" stroke="#245e5b" stroke-width="5" stroke-linecap="round"/><circle cy="-15" r="12" fill="#e8f2ef" stroke="#245e5b" stroke-width="3"/><circle cy="15" r="12" fill="#e8f2ef" stroke="#245e5b" stroke-width="3"/><circle r="10" fill="#2d716b"/><circle r="3" fill="#fff"/><path d="m0 10-50 43" stroke="#64a59c" stroke-dasharray="4 5"/></g>
+  <g transform="translate(57 273)"><rect width="134" height="40" rx="20" fill="#fff" opacity=".9"/><circle cx="22" cy="20" r="6" fill="#d59a39"/><text x="37" y="25" font-family="sans-serif" font-size="13" fill="#375d59">屋面缺陷识别</text></g>
+</svg>

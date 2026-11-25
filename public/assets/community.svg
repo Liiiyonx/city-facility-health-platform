@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">社区设施巡检示意</title><desc id="desc">错落住宅、树木与社区服务节点</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8f1ef"/><stop offset="1" stop-color="#d8e5e3"/></linearGradient><linearGradient id="front" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f7f3"/><stop offset="1" stop-color="#d3e1dc"/></linearGradient><pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0v36" fill="none" stroke="#60958c" stroke-opacity=".09"/></pattern></defs>
+  <rect width="640" height="360" rx="26" fill="url(#bg)"/><rect width="640" height="360" rx="26" fill="url(#grid)"/>
+  <circle cx="533" cy="70" r="77" fill="#fff" opacity=".3"/>
+  <path d="m83 291 222-114 247 113-228 62-241-61Z" fill="#c8d9d3"/><path d="m155 282 149-72 185 82-153 55-181-65Z" fill="#e9efea"/>
+  <path d="m176 114 99-47 98 47-99 49-98-49Z" fill="#c6d9d4"/><path d="m176 114 98 49v131l-98-48V114Z" fill="url(#front)"/><path d="m274 163 99-49v131l-99 49V163Z" fill="#9dbab2"/>
+  <g fill="#5c9188"><path d="m194 135 16 8v18l-16-8v-18Zm36 18 16 8v18l-16-8v-18ZM194 175l16 8v18l-16-8v-18Zm36 18 16 8v18l-16-8v-18ZM194 215l16 8v18l-16-8v-18Zm36 18 16 8v18l-16-8v-18Z"/><path d="m294 145 15-7v18l-15 7v-18Zm37-18 15-7v18l-15 7v-18Zm-37 38 15-7v18l-15 7v-18Zm37-18 15-7v18l-15 7v-18Zm-37 38 15-7v18l-15 7v-18Zm37-18 15-7v18l-15 7v-18Z"/></g>
+  <path d="m390 165 79-38 79 39-79 40-79-41Z" fill="#c4d8d1"/><path d="m390 165 79 41v94l-79-39v-96Z" fill="#edf2ed"/><path d="m469 206 79-40v96l-79 38v-94Z" fill="#9db8af"/>
+  <g fill="#588d82"><path d="m407 185 13 7v16l-13-7v-16Zm29 15 13 7v16l-13-7v-16Zm-29 29 13 7v16l-13-7v-16Zm29 15 13 7v16l-13-7v-16Z"/><path d="m486 186 13-6v16l-13 6v-16Zm29-15 13-6v16l-13 6v-16Zm-29 35 13-6v16l-13 6v-16Zm29-15 13-6v16l-13 6v-16Z"/></g>
+  <g><path d="M119 260v-61" stroke="#557d6c" stroke-width="6"/><circle cx="119" cy="184" r="34" fill="#78a88e"/><circle cx="101" cy="198" r="23" fill="#689a7f"/><circle cx="140" cy="200" r="24" fill="#8ab298"/><path d="M568 275v-67" stroke="#557d6c" stroke-width="6"/><circle cx="568" cy="194" r="37" fill="#7fa992"/><circle cx="547" cy="207" r="23" fill="#6b9b81"/><circle cx="589" cy="211" r="24" fill="#91b79d"/></g>
+  <path d="M315 285c22-24 49-24 71 0" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+  <g transform="translate(61 52)"><rect width="151" height="40" rx="20" fill="#fff" opacity=".88"/><circle cx="23" cy="20" r="6" fill="#278274"/><text x="38" y="25" font-family="sans-serif" font-size="13" fill="#315c54">社区设施一张图</text></g>
+</svg>

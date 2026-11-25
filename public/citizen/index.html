@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f7fb">
+  <meta name="description" content="城市设施健康公众服务平台，提交设施隐患线索并查询处理进度。">
+  <title>城市设施健康 · 公众服务</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23155e59'/%3E%3Cpath d='M8 25V9l8-4v20m0-12 8 4v8M5 25h22' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="citizen-header">
+    <div class="header-inner">
+      <a class="citizen-brand" href="#" data-tab-link="report" aria-label="公众服务首页">
+        <span class="brand-symbol"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M9 31V12l11-6v25M20 19l11 5v7M5 31h30" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><path d="m13 15 3 1.5M13 20l3 1.5M24 25l3 1.5" stroke="currentColor" stroke-width="2"/></svg></span>
+        <span><strong>城市设施健康</strong><small>公众服务 · 共建美好家园</small></span>
+      </a>
+      <span class="demo-chip">演示版</span>
+    </div>
+  </header>
+
+  <main class="citizen-main">
+    <section class="mobile-view is-active" id="view-report" data-view="report">
+      <div class="welcome-card">
+        <div class="welcome-copy"><span class="eyebrow">城市设施隐患线索</span><h1>您来发现，我们来核查</h1><p>发现建筑或社区设施异常，可拍照提交线索，随时查询处理进度。</p><span class="safe-note">非紧急事项反映渠道</span></div>
+        <img src="../assets/community.svg" alt="社区设施示意图">
+      </div>
+      <div class="notice-strip"><span data-icon="info"></span><p>如遇紧急危险，请优先远离现场并联系属地应急部门。本平台不替代紧急求助。</p></div>
+
+      <form id="report-form" class="report-form" novalidate>
+        <section class="mobile-card form-section">
+          <div class="section-heading"><span class="step-number">01</span><div><h2>线索信息</h2><p>请尽可能准确描述您发现的情况</p></div></div>
+          <label class="mobile-field"><span>线索分类 <em>*</em></span><select name="type" required aria-label="线索分类" aria-describedby="submit-error"><option value="">请选择线索分类</option><option value="crack">墙体裂缝</option><option value="hollow">外墙饰面空鼓与脱落</option><option value="spall">混凝土剥落与露筋</option><option value="corrosion">钢结构锈蚀</option><option value="leak">屋面渗漏痕迹</option><option value="sealant">幕墙密封胶失效</option><option value="other">其他异常</option></select></label>
+          <label class="mobile-field"><span>详细描述 <em>*</em></span><textarea name="description" rows="5" required minlength="5" maxlength="500" placeholder="例如：发现外墙有脱落迹象，请说明异常大小、位置和现场情况……" aria-label="详细描述" aria-describedby="submit-error"></textarea><small class="char-count"><span id="description-count">0</span>/500</small></label>
+          <label class="mobile-field"><span>所在社区</span><select name="communityId" id="community-select" aria-label="所在社区"><option value="">请选择社区（可选）</option></select><small id="context-loading">正在加载社区信息…</small></label>
+          <label class="mobile-field"><span>所在建筑</span><select name="buildingId" id="building-select" aria-label="所在建筑" disabled><option value="">请先选择社区（可选）</option></select><small>仅用于线索核查，不展示建筑敏感信息</small></label>
+        </section>
+
+        <section class="mobile-card form-section">
+          <div class="section-heading"><span class="step-number">02</span><div><h2>照片与位置</h2><p>照片和位置均为选填，准确信息有助于核查</p></div></div>
+          <div class="upload-grid">
+            <label class="upload-tile"><input type="file" name="cameraPhoto" id="camera-input" accept="image/*" capture="environment" aria-label="拍照上传"><span class="upload-icon" data-icon="camera"></span><strong>拍照</strong><small>拍摄现场异常</small></label>
+            <label class="upload-tile"><input type="file" name="albumPhoto" id="album-input" accept="image/*" aria-label="从相册选择"><span class="upload-icon" data-icon="image"></span><strong>从相册选择</strong><small>支持 JPG / PNG</small></label>
+          </div>
+          <div class="photo-preview" id="photo-preview" hidden><img id="photo-image" alt="待提交照片预览"><div><strong id="photo-name"></strong><span id="photo-size"></span></div><button class="remove-photo" type="button" data-action="remove-photo" aria-label="移除照片"><span data-icon="close"></span></button></div>
+          <div class="location-box"><div class="location-title"><span data-icon="pin"></span><div><strong>线索位置</strong><small id="location-status">可定位，也可手动填写</small></div></div><button class="btn btn-location" type="button" data-action="locate"><span data-icon="locate"></span>获取定位</button></div>
+          <label class="mobile-field"><span>手动位置 <em>*</em></span><input name="location" id="location-input" required maxlength="160" placeholder="如：××社区 ××栋东侧" aria-label="手动位置" aria-describedby="submit-error"></label>
+        </section>
+
+        <section class="mobile-card form-section">
+          <div class="section-heading"><span class="step-number">03</span><div><h2>联系与隐私</h2><p>联系方式仅用于核查沟通</p></div></div>
+          <label class="mobile-field"><span>联系电话（选填）</span><input name="contact" type="tel" maxlength="30" autocomplete="tel" placeholder="便于核实线索，不会公开" aria-label="联系电话"></label>
+          <details class="privacy-details"><summary><span data-icon="shield"></span>查看信息使用与隐私说明<span data-icon="down"></span></summary><div><p>您提交的分类、描述、位置、照片和联系方式将用于设施隐患核查与进度反馈。请勿拍摄人脸、车牌等无关个人信息。</p><p>查询时仅需报告编号，不需要登录。公众端不展示内部缺陷详情、专家意见或建筑敏感信息。</p><p>本地演示环境中的提交与查询均通过同源服务处理，规则待专家评审。</p></div></details>
+          <label class="consent"><input type="checkbox" name="consent" required aria-describedby="submit-error"><span>我已阅读并同意上述信息使用说明，确认提交内容真实客观。</span></label>
+        </section>
+        <div class="submit-error" id="submit-error" role="alert" hidden></div>
+        <button class="submit-button" id="submit-report" type="submit" aria-describedby="submit-error"><span data-icon="send"></span><span>提交隐患线索</span></button>
+        <p class="submit-hint">提交后将生成唯一报告编号，请妥善保存</p>
+      </form>
+    </section>
+
+    <section class="mobile-view" id="view-query" data-view="query">
+      <div class="simple-page-head"><span class="eyebrow">REPORT TRACKING</span><h1>查询处理进度</h1><p>输入提交成功后获得的报告编号。</p></div>
+      <section class="mobile-card query-card">
+        <label class="mobile-field"><span>报告编号</span><input id="query-code" required placeholder="请输入报告编号" autocomplete="off" aria-label="报告编号"></label>
+        <button class="submit-button compact" type="button" data-action="query"><span data-icon="search"></span><span>查询进度</span></button>
+        <p class="query-tip">编号仅用于查询本人提交的线索状态</p>
+      </section>
+      <div id="query-result" class="query-result" aria-live="polite">
+        <section class="mobile-card query-placeholder"><span class="placeholder-icon" data-icon="file"></span><h2>尚未查询</h2><p>查询结果将在这里显示，仅包含报告类型、状态与反馈。</p></section>
+      </div>
+    </section>
+
+    <section class="mobile-view" id="view-about" data-view="about">
+      <div class="simple-page-head"><span class="eyebrow">ABOUT THE SERVICE</span><h1>关于公众服务</h1><p>让每一条市民线索都被认真核查。</p></div>
+      <section class="mobile-card about-card"><img src="../assets/roof-inspection.svg" alt="设施巡检示意"><h2>共建设施健康防线</h2><p>公众服务用于收集城市设施异常线索。提交后，工作人员将结合现场核查情况更新处理状态与反馈。</p></section>
+      <section class="mobile-card about-list"><h2>服务说明</h2><div><span data-icon="check"></span><p>无需注册登录，凭报告编号查询。</p></div><div><span data-icon="check"></span><p>照片与位置可按实际情况选择提供。</p></div><div><span data-icon="check"></span><p>不公开内部缺陷、专家意见与建筑敏感信息。</p></div><div><span data-icon="shield"></span><p>请勿提交与设施隐患无关的个人信息。</p></div></section>
+      <div class="demo-disclaimer"><strong>本地演示环境 · 规则待专家评审</strong><p>平台提供 AI 辅助评估与线索流转演示，不构成正式安全鉴定。</p></div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="公众服务导航">
+    <button class="is-active" type="button" data-tab="report" aria-current="page"><span data-icon="home"></span><small>提交线索</small></button>
+    <button type="button" data-tab="query"><span data-icon="search"></span><small>查询进度</small></button>
+    <button type="button" data-tab="about"><span data-icon="info"></span><small>服务说明</small></button>
+  </nav>
+  <div class="toast-host" aria-live="polite"></div>
+  <noscript><div class="noscript">请启用 JavaScript 后使用公众服务。</div></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">城市桥梁健康巡检示意</title><desc id="desc">桥梁结构、传感器节点与检测扫描线</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9f1f1"/><stop offset="1" stop-color="#d8e5e5"/></linearGradient><linearGradient id="deck" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#789a97"/><stop offset="1" stop-color="#426c6b"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0v32" fill="none" stroke="#5b8e87" stroke-opacity=".1"/></pattern></defs>
+  <rect width="640" height="360" rx="26" fill="url(#bg)"/><rect width="640" height="360" rx="26" fill="url(#grid)"/>
+  <circle cx="523" cy="70" r="95" fill="#fff" opacity=".22"/>
+  <path d="M64 283q256-86 512 0" fill="none" stroke="#b0c8c3" stroke-width="38" opacity=".45"/>
+  <path d="m77 185 486 0 49 34-572 0 37-34Z" fill="url(#deck)"/><path d="m40 219 572 0v22L40 241v-22Z" fill="#315e5c"/>
+  <path d="M160 219v70h42v-70M438 219v70h42v-70" fill="#6c8d87"/>
+  <path d="M104 171q216-150 432 0" fill="none" stroke="#507f78" stroke-width="5"/>
+  <g stroke="#6b9790" stroke-width="2"><path d="M132 147v38M172 126v48M212 110v54M252 101v56M292 96v56M332 96v56M372 101v56M412 110v54M452 126v48M492 147v38"/></g>
+  <path d="M70 208h500" stroke="#c0d8d2" stroke-width="4" stroke-dasharray="12 9"/>
+  <g fill="#25a697" stroke="#effaf7" stroke-width="3"><circle cx="143" cy="216" r="7"/><circle cx="254" cy="190" r="7"/><circle cx="376" cy="190" r="7"/><circle cx="495" cy="216" r="7"/></g>
+  <path d="M98 70h109v55" fill="none" stroke="#23a093" stroke-width="2" opacity=".55"/><path d="M456 254h86v-53" fill="none" stroke="#23a093" stroke-width="2" opacity=".55"/>
+  <g transform="translate(59 276)"><rect width="143" height="40" rx="20" fill="#fff" opacity=".9"/><circle cx="23" cy="20" r="6" fill="#238a7d"/><text x="38" y="25" font-family="sans-serif" font-size="13" fill="#315e59">结构传感监测</text></g>
+</svg>

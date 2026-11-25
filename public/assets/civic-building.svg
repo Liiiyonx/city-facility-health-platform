@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">公共建筑健康巡检示意</title><desc id="desc">深蓝绿色调的公共建筑与巡检扫描网格</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf3f1"/><stop offset="1" stop-color="#d9e7e6"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#93c7c1"/><stop offset="1" stop-color="#397b78"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0v32" fill="none" stroke="#5f9992" stroke-opacity=".12"/></pattern>
+    <filter id="shadow"><feGaussianBlur stdDeviation="9"/></filter>
+  </defs>
+  <rect width="640" height="360" rx="26" fill="url(#bg)"/><rect width="640" height="360" rx="26" fill="url(#grid)"/>
+  <circle cx="515" cy="73" r="96" fill="#fff" opacity=".23"/>
+  <ellipse cx="326" cy="306" rx="185" ry="25" fill="#315e5b" opacity=".17" filter="url(#shadow)"/>
+  <path d="m170 129 150-71 151 71-151 73-150-73Z" fill="#c9dcda"/><path d="m170 129 150 73v143l-150-72V129Z" fill="#e8f0ee"/><path d="m320 202 151-73v145l-151 71V202Z" fill="#a8c4c0"/>
+  <path d="m204 135 117-53 116 53-116 55-117-55Z" fill="#f5f9f8"/><path d="M204 135v32l116 56v-33l-116-55ZM437 135v33l-117 55v-33l117-55Z" fill="#749b96"/>
+  <path d="m239 177 18 9v116l-18-9V177Zm37 18 18 9v116l-18-9V195Zm38 18 17-8v115l-17 8V213Zm77-45 18-9v116l-18 9V168Zm-38-18 18-9V257l-18 9V150Z" fill="url(#glass)" opacity=".88"/>
+  <path d="m239 177 18 9v116l-18-9V177Zm37 18 18 9v116l-18-9V195Zm38 18 17-8v115l-17 8V213Z" fill="none" stroke="#d9eeea" stroke-width="2" opacity=".6"/>
+  <path d="M290 287v-55l30-14v55" fill="#2b6662"/><path d="m282 338 125-61 70 34-126 64-69-37Z" fill="#c3d6d2"/>
+  <g fill="none" stroke="#21a69a" stroke-width="2"><path d="m144 86 350 166" stroke-dasharray="7 8" opacity=".7"/><path d="M180 62h49v44" opacity=".45"/><path d="M445 250h47v-47" opacity=".45"/></g>
+  <circle cx="178" cy="103" r="7" fill="#21a69a"/><circle cx="457" cy="238" r="7" fill="#21a69a"/>
+  <g transform="translate(61 267)"><rect width="116" height="42" rx="21" fill="#fff" opacity=".9"/><circle cx="23" cy="21" r="6" fill="#1b8378"/><text x="38" y="26" font-family="sans-serif" font-size="13" fill="#255c58">智能健康感知</text></g>
+</svg>

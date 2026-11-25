@@ -1,0 +1,18 @@
+{
+  "name": "city-facility-health-platform",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AI驱动的城建设施轻量化体检与健康评估平台首期本地演示原型",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-contract.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "browser:check": "node scripts/browser-check.mjs"
+  }
+}

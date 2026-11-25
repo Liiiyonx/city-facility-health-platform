@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f7fb">
+  <meta name="description" content="AI 驱动的城建设施轻量化体检与健康评估平台管理端">
+  <title>设施健康管理平台 · 管理端</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23124f4c'/%3E%3Cpath d='M8 25V9l8-4v20m0-12 8 4v8M5 25h22' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar" id="sidebar" aria-label="主导航">
+      <a class="brand" href="#/dashboard" aria-label="城市设施健康平台首页">
+        <span class="brand-mark"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M9 31V12l11-6v25M20 19l11 5v7M5 31h30" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><path d="m13 15 3 1.5M13 20l3 1.5M24 25l3 1.5" stroke="currentColor" stroke-width="2"/></svg></span>
+        <span><strong>城市设施健康平台</strong><small>AI 辅助 · 轻量化体检</small></span>
+      </a>
+      <div class="sidebar-label">工作台</div>
+      <nav class="side-nav">
+        <a href="#/dashboard" data-nav="dashboard"><span data-icon="dashboard"></span><span>健康总览</span></a>
+        <a href="#/facilities" data-nav="facilities"><span data-icon="building"></span><span>设施台账</span></a>
+        <a href="#/facility" data-nav="facility" hidden><span data-icon="layers"></span><span>设施详情</span></a>
+      </nav>
+      <div class="sidebar-label">业务流程</div>
+      <nav class="side-nav">
+        <a href="#/inspections" data-nav="inspections"><span data-icon="clipboard"></span><span>巡检任务</span></a>
+        <a href="#/detections" data-nav="detections"><span data-icon="scan"></span><span>AI 缺陷识别</span></a>
+        <a href="#/reviews" data-nav="reviews"><span data-icon="shield"></span><span>专家复核</span></a>
+        <a href="#/responses" data-nav="responses"><span data-icon="response"></span><span>部门响应</span></a>
+        <a href="#/workorders" data-nav="workorders"><span data-icon="workorder"></span><span>整改工单</span></a>
+      </nav>
+      <div class="sidebar-label">协同与治理</div>
+      <nav class="side-nav">
+        <a href="#/public" data-nav="public"><span data-icon="public"></span><span>公众线索</span></a>
+        <a href="#/audit" data-nav="audit"><span data-icon="audit"></span><span>审计日志</span></a>
+      </nav>
+      <div class="sidebar-foot">
+        <span class="demo-pill"><i></i>本地演示环境</span>
+        <strong>规则待专家评审</strong>
+        <p>AI 辅助评估仅用于演示与辅助决策，不构成正式安全鉴定。</p>
+        <a href="../citizen/index.html" target="_blank" rel="noopener">打开公众服务端 <span data-icon="external"></span></a>
+      </div>
+    </aside>
+    <div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="打开导航"><span data-icon="menu"></span></button>
+          <div class="breadcrumb"><span>城建设施</span><b>/</b><strong id="page-title">健康总览</strong></div>
+        </div>
+        <div class="topbar-right">
+          <span class="environment-label"><i></i>本地演示环境 · 规则待专家评审</span>
+          <div class="user-switcher">
+            <span class="avatar" id="user-avatar">监</span>
+            <label><small>当前演示角色</small><select id="user-select" aria-label="切换演示用户">
+              <option value="gov-1">区级监管</option>
+              <option value="street-1">街道</option>
+              <option value="community-1">社区</option>
+              <option value="pilot-1">巡检员</option>
+              <option value="expert-1">专家</option>
+              <option value="property-1">物业</option>
+              <option value="repair-1">维修单位</option>
+              <option value="accept-1">复检</option>
+              <option value="admin-1">管理员</option>
+            </select></label>
+            <span data-icon="down" class="select-arrow"></span>
+          </div>
+        </div>
+      </header>
+      <main id="app" class="app-main" tabindex="-1"></main>
+      <footer class="app-footer"><span>城市设施健康管理平台 · 前端演示</span><span>所有评估结论以专家复核为准</span></footer>
+    </div>
+  </div>
+  <noscript><div class="noscript">本平台需要启用 JavaScript 才能运行。</div></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
